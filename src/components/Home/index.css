@@ -1,0 +1,5 @@
+.bg-color {
+  background-image: url(https://assets.ccbp.in/frontend/react-js/home-lg-bg.png);
+  height: 100vh;
+  size: cover;
+}

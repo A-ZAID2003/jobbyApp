@@ -20,7 +20,6 @@ class LoginForm extends Component {
 
   onSubmitSuccess = jwtToken => {
     const {history} = this.props
-
     Cookies.set('jwt_token', jwtToken, {
       expires: 30,
     })
@@ -91,7 +90,10 @@ class LoginForm extends Component {
     }
     return (
       <div>
-        <img />
+        <img
+          src="https://assets.ccbp.in/frontend/react-js/logo-img.png "
+          alt="website logo "
+        />
         <form className="form-container" onSubmit={this.submitForm}>
           <div className="input-container">{this.renderUsernameField()}</div>
           <div className="input-container">{this.renderPasswordField()}</div>
