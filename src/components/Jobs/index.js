@@ -54,15 +54,15 @@ class Jobs extends Component {
     const response = fetch(apiUrl, options)
     if (response.ok === true) {
       const fetchedData = await response.json()
-      const updatedData = fetchedData.jobsList.map(jobItem => ({
-        companyLogoUrl: jobItem.company_logo_url,
-        employmentType: jobItem.employment_type,
-        id: jobItem.id,
-        jobDescription: jobItem.jobDescription,
-        location: jobItem.location,
-        packagePerAnnum: jobItem.package_per_annum,
-        rating: jobItem.rating,
-        title: jobItem.title,
+      const updatedData = fetchedData.jobsList.map(jobItems => ({
+        companyLogoUrl: jobItems.company_logo_url,
+        employmentType: jobItems.employment_type,
+        id: jobItems.id,
+        jobDescription: jobItems.jobDescription,
+        location: jobItems.location,
+        packagePerAnnum: jobItems.package_per_annum,
+        rating: jobItems.rating,
+        title: jobItems.title,
       }))
       this.setState({
         jobsList: updatedData,
