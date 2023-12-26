@@ -1,7 +1,7 @@
 import './index.css'
 
 const JobItem = props => {
-  const {JobItemData} = props
+  const {JobsData} = props
   const {
     companyLogoUrl,
     employmentType,
@@ -11,7 +11,7 @@ const JobItem = props => {
     packagePerAnnum,
     rating,
     title,
-  } = JobItemData
+  } = JobsData
   return (
     <div>
       <div>

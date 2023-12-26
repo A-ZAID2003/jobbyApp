@@ -1,18 +1,44 @@
-import {component} from 'react'
+import {Component} from 'react'
 
 import Cookies from 'js-cookie'
-import jobItem from './component/JobItem'
-import JobDetails from './component/JobDetails'
+import jobItem from '../JobItem'
+import JobDetails from '../JobDetails'
 
-class Jobs extends component {
+class Jobs extends Component {
   state = {
     jobsList: [],
     jobsDetailsList: [],
+    profile: [],
   }
 
   componentDidMount() {
     this.getJobsList()
     this.getJobsDetailsList()
+    this.profile()
+  }
+
+  profile = async () => {
+    const jwtToken = Cookies.get('jwt_token')
+
+    const apiUrl = 'https://apis.ccbp.in/profile'
+    const options = {
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+      method: 'GET',
+    }
+    const response = fetch(apiUrl, options)
+    if (response.ok === true) {
+      const fetchedData = await response.json()
+      const updatedData = fetchedData.jobsList.map(profileItem => ({
+        name: profileItem.name,
+        profileImageUrl: profileItem.profile_image_url,
+        shortBio: profileItem.short_bio,
+      }))
+      this.setState({
+        profile: updatedData,
+      })
+    }
   }
 
   getJobsList = async () => {
@@ -70,6 +96,9 @@ class Jobs extends component {
         packagePerAnnum: itemDetails.package_per_annum,
         rating: itemDetails.rating,
       }))
+      this.setState({
+        jobsDetailsList: updatedData,
+      })
     }
   }
 
