@@ -3,6 +3,7 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 import jobItem from '../JobItem'
 import JobDetails from '../JobDetails'
+import Header from '../Header'
 
 class Jobs extends Component {
   state = {
@@ -113,49 +114,52 @@ class Jobs extends Component {
   render() {
     return (
       <div>
-        {this.profile()}
+        <Header />
         <div>
-          <h1>Type of employment</h1>
+          {this.profile()}
           <div>
-            <input type="checkbox" />
-            <p>Full Time</p>
+            <h1>Type of employment</h1>
+            <div>
+              <input type="checkbox" />
+              <p>Full Time</p>
+            </div>
+            <div>
+              <input type="checkbox" />
+              <p>Part Time</p>
+            </div>
+            <div>
+              <input type="checkbox" />
+              <p>Freelance</p>
+            </div>
+            <div>
+              <input type="checkbox" />
+              <p>Internship</p>
+            </div>
           </div>
           <div>
-            <input type="checkbox" />
-            <p>Part Time</p>
+            <h1>Salary Range</h1>
+            <div>
+              <input type="radio" />
+              <p>10 LPA and above</p>
+            </div>
+            <div>
+              <input type="radio" />
+              <p>20 LPA and above</p>
+            </div>
+            <div>
+              <input type="radio" />
+              <p>30 LPA and above</p>
+            </div>
+            <div>
+              <input type="radio" />
+              <p>40 LPA and above</p>
+            </div>
           </div>
-          <div>
-            <input type="checkbox" />
-            <p>Freelance</p>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <p>Internship</p>
-          </div>
-        </div>
-        <div>
-          <h1>Salary Range</h1>
-          <div>
-            <input type="radio" />
-            <p>10 LPA and above</p>
-          </div>
-          <div>
-            <input type="radio" />
-            <p>20 LPA and above</p>
-          </div>
-          <div>
-            <input type="radio" />
-            <p>30 LPA and above</p>
-          </div>
-          <div>
-            <input type="radio" />
-            <p>40 LPA and above</p>
-          </div>
-        </div>
 
-        <div>
-          <input type="search" placeholder="search" />
-          <jobItem />
+          <div>
+            <input type="search" placeholder="search" />
+            <jobItem />
+          </div>
         </div>
       </div>
     )
