@@ -15,13 +15,14 @@ const Home = () => {
       <Header />
       <div className="bg-color">
         <h1>Find The Job That Fits Your Life</h1>
-        <p>
-          Millions of peoples are searching for jobs, salary information company
-          reviews.Find a Job that fits your ability and potential.
-        </p>
+        <p>Millions of people are searching for jobs</p>
         <Link to="/jobs">
           <button type="button">Find Jobs</button>
         </Link>
+        <img
+          src="https://assets.ccbp.in/frontend/react-js/home-lg-bg.png"
+          alt="website logo"
+        />
       </div>
     </>
   )

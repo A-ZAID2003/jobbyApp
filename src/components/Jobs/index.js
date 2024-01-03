@@ -139,20 +139,20 @@ class Jobs extends Component {
           <div>
             <h1>Salary Range</h1>
             <div>
-              <input type="radio" />
-              <p>10 LPA and above</p>
+              <input type="radio" value="label" id="label" />
+              <label for="label">10 LPA and above</label>
             </div>
             <div>
-              <input type="radio" />
-              <p>20 LPA and above</p>
+              <input type="radio" value="label" id="label" />
+              <label for="label">20 LPA and above</label>
             </div>
             <div>
-              <input type="radio" />
-              <p>30 LPA and above</p>
+              <input type="radio" value="label" id="label" />
+              <label for="label">30 LPA and above</label>
             </div>
             <div>
-              <input type="radio" />
-              <p>40 LPA and above</p>
+              <input type="radio" value="label" id="label" />
+              <label for="label">40 LPA and above</label>
             </div>
           </div>
 
