@@ -5,6 +5,44 @@ import jobItem from '../JobItem'
 import JobDetails from '../JobDetails'
 import Header from '../Header'
 
+const employmentTypesList = [
+  {
+    label: 'Full Time',
+    employmentTypeId: 'FULLTIME',
+  },
+  {
+    label: 'Part Time',
+    employmentTypeId: 'PARTTIME',
+  },
+  {
+    label: 'Freelance',
+    employmentTypeId: 'FREELANCE',
+  },
+  {
+    label: 'Internship',
+    employmentTypeId: 'INTERNSHIP',
+  },
+]
+
+const salaryRangesList = [
+  {
+    salaryRangeId: '1000000',
+    label: '10 LPA and above',
+  },
+  {
+    salaryRangeId: '2000000',
+    label: '20 LPA and above',
+  },
+  {
+    salaryRangeId: '3000000',
+    label: '30 LPA and above',
+  },
+  {
+    salaryRangeId: '4000000',
+    label: '40 LPA and above',
+  },
+]
+
 class Jobs extends Component {
   state = {
     jobsList: [],
@@ -121,38 +159,38 @@ class Jobs extends Component {
             <h1>Type of employment</h1>
             <div>
               <input type="checkbox" />
-              <p>Full Time</p>
+              <label>Full Time</label>
             </div>
             <div>
               <input type="checkbox" />
-              <p>Part Time</p>
+              <label>Part Time</label>
             </div>
             <div>
               <input type="checkbox" />
-              <p>Freelance</p>
+              <label>Freelance</label>
             </div>
             <div>
               <input type="checkbox" />
-              <p>Internship</p>
+              <label>Internship</label>
             </div>
           </div>
           <div>
             <h1>Salary Range</h1>
             <div>
               <input type="radio" value="label" id="label" />
-              <label for="label">10 LPA and above</label>
+              <label htmlFor="label">10 LPA and above</label>
             </div>
             <div>
               <input type="radio" value="label" id="label" />
-              <label for="label">20 LPA and above</label>
+              <label htmlFor="label">20 LPA and above</label>
             </div>
             <div>
               <input type="radio" value="label" id="label" />
-              <label for="label">30 LPA and above</label>
+              <label htmlFor="label">30 LPA and above</label>
             </div>
             <div>
               <input type="radio" value="label" id="label" />
-              <label for="label">40 LPA and above</label>
+              <label htmlFor="label">40 LPA and above</label>
             </div>
           </div>
 
